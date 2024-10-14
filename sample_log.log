@@ -1,0 +1,10 @@
+2024-10-12 14:32:01 ERROR Failed to authenticate user admin
+2024-10-12 14:35:45 INFO User admin logged in successfully
+2024-10-12 15:01:12 WARN Disk space running low on /dev/sda1
+2024-10-12 15:22:09 ERROR Connection to database timed out
+2024-10-13 09:12:34 INFO Scheduled backup completed
+2024-10-13 10:45:22 ERROR Failed to connect to service api.example.com
+2024-10-13 11:01:07 INFO User guest logged out
+2024-10-14 08:33:45 WARN CPU usage at 95%
+2024-10-14 09:44:18 ERROR Failed to initialize application
+2024-10-14 11:12:22 INFO Service restarted successfully
