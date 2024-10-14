@@ -18,19 +18,19 @@ validate_file() {
     fi
 }
 
-# Check if help flag is provided
+
 if [[ "$1" == "-h" ]]; then
     usage
 fi
 
-# Prompt user for log file input
+# Prompt user
 echo "Enter the path to the log file you want to analyze (e.g., /var/log/syslog):"
 read log_file
 
 # Validate the log file
 validate_file "$log_file"
 
-# Prompt for optional filters
+# Prompt 
 echo "Enter a date to filter logs by (format: YYYY-MM-DD) or press ENTER to skip:"
 read date_filter
 
@@ -40,7 +40,7 @@ read log_level
 echo "Enter a keyword to search in log entries or press ENTER to skip:"
 read keyword_filter
 
-# Build the grep command dynamically based on provided filters
+
 grep_cmd="grep "
 
 if [[ -n "$date_filter" ]]; then
@@ -57,7 +57,7 @@ fi
 
 grep_cmd+="$log_file"
 
-# Confirm and display the applied filters to the user
+# Confirm 
 echo "Applying the following filters to the log file:"
 if [[ -n "$date_filter" ]]; then
     echo "- Date: $date_filter"
@@ -69,7 +69,7 @@ if [[ -n "$keyword_filter" ]]; then
     echo "- Keyword: $keyword_filter"
 fi
 
-# Execute the grep command and count results
+
 result=$(eval "$grep_cmd")
 
 # Output the results
